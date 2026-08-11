@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="calculator">
+
+        <div class="top">
+            <span>CALCULATOR</span>
+            <i class="fa-solid fa-calculator"></i>
+        </div>
+
+        <div class="display">
+
+           <div id="expression">0</div>
+
+           <div id="result">0</div>
+
+       </div>
+
+        <div class="buttons">
+
+            <button class="function" data-action="clear">AC</button>
+            <button class="function" data-action="delete">
+                <i class="fa-solid fa-delete-left"></i>
+            </button>
+            <button class="function" data-action="percent">%</button>
+            <button class="operator" data-value="/">÷</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button class="operator" data-value="*">×</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button class="operator" data-value="-">−</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button class="operator" data-value="+">+</button>
+
+            <button data-value="0" class="zero">0</button>
+            <button data-value=".">.</button>
+            <button class="equals" data-action="calculate">=</button>
+
+        </div>
+
+        <p class="keyboard">
+            <i class="fa-regular fa-keyboard"></i>
+            Keyboard supported
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
