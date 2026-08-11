@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeAlpha Image Gallery</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <h1>📸 CodeAlpha Image Gallery</h1>
+
+            <p>
+                Explore beautiful images with our interactive gallery
+            </p>
+
+            <!-- Dark / Light Mode -->
+
+            <button id="themeToggle" class="theme-btn">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         SEARCH
+    ========================== -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <span class="search-icon">🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by image name or category..."
+                autocomplete="off">
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                title="Clear Search">
+                ✕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FILTER BUTTONS
+    ========================== -->
+
+    <section class="filter-section">
+
+        <button
+            class="filter-btn active"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="nature">
+            🌿 Nature
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="city">
+            🏙️ City
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="animals">
+            🐾 Animals
+        </button>
+
+        <button
+            class="filter-btn"
+            data-filter="food">
+            🍕 Food
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         IMAGE COUNT
+    ========================== -->
+
+    <div class="gallery-info">
+
+        <p id="imageCount">
+            Showing 12 images
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         IMAGE GALLERY
+    ========================== -->
+
+    <main class="gallery" id="gallery">
+
+
+        <!-- ===== NATURE ===== -->
+
+        <div
+            class="gallery-item nature"
+            data-category="nature"
+            data-title="Beautiful Cortage">
+
+            <img
+                src="images/nature1.jpeg"
+                alt="Beautiful Cortage"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Beautiful Cortage</h3>
+
+                <p>Nature</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="gallery-item nature"
+            data-category="nature"
+            data-title="Beautiful Waterfall">
+
+            <img
+                src="images/nature2.jpeg"
+                alt="Beautiful Waterfall"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Waterfall</h3>
+
+                <p>Nature</p>
+
+            </div>
+
+        </div>
+
+        <div
+            class="gallery-item nature"
+            data-category="nature"
+            data-title="Beautiful lake">
+
+            <img
+                src="images/nature3.jpeg"
+                alt="Beautiful lake"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Beautiful lake</h3>
+
+                <p>Nature</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item nature"
+            data-category="nature"
+            data-title="Green Mountain">
+
+            <img
+                src="images/nature4.jpeg"
+                alt="Green Mountain"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Green Mountain</h3>
+
+                <p>Nature</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===== CITY ===== -->
+
+        <div
+            class="gallery-item city"
+            data-category="city"
+            data-title="Ancient City">
+
+            <img
+                src="images/city1.jpeg"
+                alt="Ancient city"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Ancient City</h3>
+
+                <p>City</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item city"
+            data-category="city"
+            data-title="Modern City">
+
+            <img
+                src="images/city2.jpeg"
+                alt="Modern City"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Modern City</h3>
+
+                <p>City</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item city"
+            data-category="city"
+            data-title="Paris, France">
+
+            <img
+                src="images/city3.jpeg"
+                alt="Paris, France"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Paris, France</h3>
+
+                <p>City</p>
+
+            </div>
+
+        </div>
+        <div
+            class="gallery-item city"
+            data-category="city"
+            data-title="Urban Skyline">
+
+            <img
+                src="images/city4.jpeg"
+                alt="Urban Skyline"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Urban Skyline</h3>
+
+                <p>City</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===== ANIMALS ===== -->
+
+        <div
+            class="gallery-item animals"
+            data-category="animals"
+            data-title="Cute Rabbit">
+
+            <img
+                src="images/animal1.jpeg"
+                alt="Cute Rabbit"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Cute Rabbit</h3>
+
+                <p>Animals</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item animals"
+            data-category="animals"
+            data-title="Panda">
+
+            <img
+                src="images/animal2.jpeg"
+                alt="Panda"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Panda</h3>
+
+                <p>Animals</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item animals"
+            data-category="animals"
+            data-title="Runing Horse">
+
+            <img
+                src="images/animal3.jpeg"
+                alt="Runing Horse"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Runing Horse</h3>
+
+                <p>Animals</p>
+
+            </div>
+
+        </div>
+         <div
+            class="gallery-item animals"
+            data-category="animals"
+            data-title="Deer">
+
+            <img
+                src="images/animal4.jpeg"
+                alt="Deer"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Deer</h3>
+
+                <p>Animals</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===== FOOD ===== -->
+
+        <div
+            class="gallery-item food"
+            data-category="food"
+            data-title="Chicken Momos">
+
+            <img
+                src="images/food1.jpeg"
+                alt="Chicken Momos"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Chicken Momos</h3>
+
+                <p>Food</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item food"
+            data-category="food"
+            data-title="Roasted sweet Chicken">
+
+            <img
+                src="images/food2.jpeg"
+                alt="Roasted sweet Chicken"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Roasted sweet Chicken</h3>
+
+                <p>Food</p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="gallery-item food"
+            data-category="food"
+            data-title="Chocolate Cake">
+
+            <img
+                src="images/food3.jpeg"
+                alt="Chocolate Cake"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Food</p>
+
+            </div>
+
+        </div>
+      <div
+            class="gallery-item food"
+            data-category="food"
+            data-title="Biryani">
+
+            <img
+                src="images/food4.jpeg"
+                alt="Biryani"
+                loading="lazy">
+
+            <div class="image-overlay">
+
+                <h3>Biryani</h3>
+
+                <p>Food</p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         NO RESULTS MESSAGE
+    ========================== -->
+
+    <div
+        id="noResults"
+        class="no-results">
+
+        <div class="no-results-icon">
+            🔍
+        </div>
+
+        <h2>No Images Found</h2>
+
+        <p>
+            Try searching for another image or category.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         LIGHTBOX
+    ========================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true">
+
+
+        <!-- Close -->
+
+        <button
+            class="close"
+            id="closeBtn"
+            aria-label="Close">
+            &times;
+        </button>
+
+
+        <!-- Previous -->
+
+        <button
+            class="prev"
+            id="prevBtn"
+            aria-label="Previous Image">
+            &#10094;
+        </button>
+
+
+        <!-- Image Container -->
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Image Preview">
+
+
+            <!-- Image Information -->
+
+            <div class="lightbox-info">
+
+                <h3 id="lightboxTitle">
+                    Image
+                </h3>
+
+                <p id="lightboxCategory">
+                    Category
+                </p>
+
+            </div>
+
+
+            <!-- Image Counter -->
+
+            <div
+                class="image-counter"
+                id="imageCounter">
+                1 / 12
+            </div>
+
+
+            <!-- Download Button -->
+
+            <a
+                id="downloadBtn"
+                class="download-btn"
+                href="#"
+                download>
+
+                ⬇️ Download Image
+
+            </a>
+
+        </div>
+
+
+        <!-- Next -->
+
+        <button
+            class="next"
+            id="nextBtn"
+            aria-label="Next Image">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <h3>📸 CodeAlpha Image Gallery</h3>
+
+        <p>
+            CodeAlpha Web Development Internship
+        </p>
+
+        <p class="copyright">
+            © 2026 Shanza Rehman. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
